@@ -1,129 +1,113 @@
-import { Star } from "lucide-react"
 import { motion } from "framer-motion"
-
-import { Avatar, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import Icon from "@/components/ui/icon"
 
-interface Hero7Props {
-  heading?: string
-  description?: string
-  button?: {
-    text: string
-    url: string
-  }
-  reviews?: {
-    count: number
-    rating?: number
-    avatars: {
-      src: string
-      alt: string
-    }[]
-  }
-}
-
-const Hero7 = ({
-  heading = "Премиум шаблоны для продуктивности",
-  description = "Стильные профессиональные шаблоны для повышения продуктивности и оптимизации рабочего процесса. Готовы к использованию, легко настраиваются.",
-  button = {
-    text: "Смотреть шаблоны",
-    url: "#",
-  },
-  reviews = {
-    count: 500,
-    rating: 4.9,
-    avatars: [
-      {
-        src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-1.webp",
-        alt: "Avatar 1",
-      },
-      {
-        src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-2.webp",
-        alt: "Avatar 2",
-      },
-      {
-        src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-3.webp",
-        alt: "Avatar 3",
-      },
-      {
-        src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-4.webp",
-        alt: "Avatar 4",
-      },
-      {
-        src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-5.webp",
-        alt: "Avatar 5",
-      },
-    ],
-  },
-}: Hero7Props) => {
+const Hero7 = () => {
   return (
-    <section className="py-32">
-      <div className="container text-center">
-        <div className="mx-auto flex max-w-5xl flex-col gap-6">
-          <motion.h1
-            className="text-3xl font-extrabold lg:text-6xl font-heading text-balance"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              ease: "easeOut",
-              delay: 0.2,
-            }}
-          >
-            {heading}
-          </motion.h1>
-          <motion.p
-            className="text-muted-foreground text-balance lg:text-lg font-sans"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              ease: "easeOut",
-              delay: 0.4,
-            }}
-          >
-            {description}
-          </motion.p>
-        </div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.8,
-            ease: "easeOut",
-            delay: 0.6,
-          }}
-        >
-          <Button asChild size="lg" className="mt-10">
-            <a href={button.url}>{button.text}</a>
-          </Button>
-        </motion.div>
-        <motion.div
-          className="mx-auto mt-10 flex w-fit flex-col items-center gap-4 sm:flex-row"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.8,
-            ease: "easeOut",
-            delay: 0.8,
-          }}
-        >
-          <span className="mx-4 inline-flex items-center -space-x-4">
-            {reviews.avatars.map((avatar, index) => (
-              <Avatar key={index} className="size-14 border">
-                <AvatarImage src={avatar.src || "/placeholder.svg"} alt={avatar.alt} />
-              </Avatar>
-            ))}
-          </span>
-          <div>
-            <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, index) => (
-                <Star key={index} className="size-5 fill-yellow-400 text-yellow-400" />
+    <section className="py-20 lg:py-28">
+      <div className="container">
+        <div className="mx-auto flex max-w-6xl flex-col lg:flex-row items-center gap-12">
+          {/* Left: Text + Form */}
+          <div className="flex-1 text-left">
+            <motion.div
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-sm font-medium mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+            >
+              <Icon name="Shield" size={14} />
+              Более 15 инженерных систем под ключ
+            </motion.div>
+
+            <motion.h1
+              className="text-3xl font-extrabold lg:text-5xl font-heading text-gray-900 leading-tight mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            >
+              Комплексные инженерные решения для{" "}
+              <span className="text-indigo-600">безопасности и связи</span>{" "}
+              вашего объекта
+            </motion.h1>
+
+            <motion.p
+              className="text-gray-500 text-lg mb-8 leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+            >
+              Проектирование, монтаж и сервис систем: от ОПС и СКУД до волоконной оптики и водоподготовки. Работаем с офисами, складами, ЖК и производствами.
+            </motion.p>
+
+            <motion.div
+              className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+            >
+              <p className="text-sm font-semibold text-gray-700 mb-4">
+                Оставьте заявку — получите смету и КП за 24 часа
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Input placeholder="Ваш телефон или e-mail" className="flex-1" />
+                <Button className="bg-indigo-600 hover:bg-indigo-700 text-white whitespace-nowrap">
+                  Получить расчёт
+                </Button>
+              </div>
+              <p className="text-xs text-gray-400 mt-3 flex items-center gap-1">
+                <Icon name="Lock" size={11} />
+                Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="flex flex-wrap gap-6 mt-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
+            >
+              {[
+                { icon: "Clock", text: "Выезд за 24 часа" },
+                { icon: "Award", text: "Гарантия 36 месяцев" },
+                { icon: "FileCheck", text: "Лицензии МЧС и ФСБ" },
+              ].map((item) => (
+                <div key={item.text} className="flex items-center gap-2 text-sm text-gray-600">
+                  <Icon name={item.icon as "Clock"} size={16} className="text-indigo-500" />
+                  {item.text}
+                </div>
               ))}
-              <span className="mr-1 font-semibold">{reviews.rating?.toFixed(1)}</span>
-            </div>
-            <p className="text-muted-foreground text-left font-medium">{reviews.count}+ отзывов</p>
+            </motion.div>
           </div>
-        </motion.div>
+
+          {/* Right: Image collage */}
+          <motion.div
+            className="flex-1 relative"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut", delay: 0.4 }}
+          >
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/afae11c2-1822-40f3-999b-ca317e173132.jpg"
+                alt="Серверная и инженерные системы"
+                className="w-full h-80 lg:h-96 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/40 to-transparent" />
+            </div>
+            <div className="absolute -bottom-4 -left-4 rounded-xl overflow-hidden shadow-xl border-4 border-white w-40 h-28">
+              <img
+                src="https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/03654ba3-ff8a-4908-b41e-2fa290faf613.jpg"
+                alt="Инженер на объекте"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="absolute -top-3 -right-3 bg-white rounded-xl p-3 shadow-lg border border-slate-100">
+              <div className="text-2xl font-bold text-indigo-600 font-heading">200+</div>
+              <div className="text-xs text-gray-500">сданных объектов</div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   )

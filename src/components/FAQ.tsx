@@ -1,0 +1,75 @@
+import { motion } from "framer-motion"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+
+const faqs = [
+  {
+    q: "У нас уже есть проект — вы можете смонтировать по чужой документации?",
+    a: "Да, мы работаем по проектной документации любых проектных организаций. Наши инженеры изучат проект, при необходимости выполнят экспертизу и дадут замечания. Если документация требует корректировок — поможем их внести.",
+  },
+  {
+    q: "Даёте ли гарантию на системы водоподготовки?",
+    a: "На все выполненные монтажные работы даём гарантию 36 месяцев. На оборудование распространяется гарантия производителя — как правило, от 12 до 24 месяцев. Гарантийные условия фиксируются в договоре.",
+  },
+  {
+    q: "Вы работаете с НДС или без?",
+    a: "Работаем на общей системе налогообложения (ОСНО) с НДС 20%. Все платежи проходят через расчётный счёт, закрывающие документы (акты, счета-фактуры, накладные) предоставляем в полном объёме.",
+  },
+  {
+    q: "Берёте ли объекты на абонентское обслуживание?",
+    a: "Да, берём — как объекты, которые монтировали сами, так и сторонние. Для постановки на обслуживание проводим первичный технический аудит, после которого заключаем договор ТО с фиксированной ежемесячной стоимостью.",
+  },
+  {
+    q: "Как быстро вы можете приступить к работам?",
+    a: "Выезд инженера для аудита — в течение 24 часов. После согласования сметы и подписания договора мобилизация бригады занимает от 3 рабочих дней. Точные сроки зависят от масштаба объекта.",
+  },
+  {
+    q: "Работаете ли вы в других регионах России?",
+    a: "Да, выполняем проекты по всей России. Для объектов за пределами нашего региона формируется выездная бригада. Командировочные расходы закладываются в смету или оговариваются отдельно.",
+  },
+]
+
+export function FAQ() {
+  return (
+    <section className="py-20 bg-white">
+      <div className="container">
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
+          <h2 className="text-3xl lg:text-4xl font-extrabold font-heading text-gray-900 mb-3">
+            Частые вопросы
+          </h2>
+          <p className="text-gray-500 text-lg">Отвечаем на то, что чаще всего спрашивают заказчики</p>
+        </motion.div>
+
+        <motion.div
+          className="max-w-3xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
+          <Accordion type="single" collapsible className="flex flex-col gap-3">
+            {faqs.map((faq, i) => (
+              <AccordionItem
+                key={i}
+                value={`item-${i}`}
+                className="border border-slate-200 rounded-xl px-5 data-[state=open]:border-indigo-200 data-[state=open]:shadow-sm"
+              >
+                <AccordionTrigger className="text-left font-semibold text-gray-800 hover:no-underline py-4">
+                  {faq.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-500 text-sm leading-relaxed pb-4">
+                  {faq.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
