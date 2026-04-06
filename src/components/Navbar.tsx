@@ -1,18 +1,17 @@
 import { Button } from "@/components/ui/button"
 import Icon from "@/components/ui/icon"
 
+
 export function Navbar() {
   return (
     <nav className="relative z-10 w-full px-6 py-4 border-b border-slate-200/60 bg-white/80 backdrop-blur-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-indigo-600">
-            <Icon name="Zap" size={18} className="text-white" />
-          </div>
-          <div>
-            <div className="text-lg font-bold font-heading text-gray-900 leading-tight">ИнжСистемы</div>
-            <div className="text-xs text-gray-500 leading-tight">Проектирование · Монтаж · Сервис</div>
-          </div>
+        <div className="flex items-center">
+          <img
+            src="https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/bucket/b6620dc8-9f2e-4d34-81e9-7e3598ca8be0.png"
+            alt="ИнженерТехМонтаж"
+            className="h-12 w-auto"
+          />
         </div>
 
         <div className="hidden md:flex items-center gap-6 text-sm text-gray-600">
