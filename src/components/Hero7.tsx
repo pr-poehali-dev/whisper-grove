@@ -103,7 +103,7 @@ const Hero7 = () => {
               />
             </div>
             <div className="absolute -top-3 -right-3 bg-white rounded-xl p-3 shadow-lg border border-slate-100">
-              <div className="text-2xl font-bold text-indigo-600 font-heading">200+</div>
+              <div className="text-2xl font-bold text-indigo-600 font-heading">50+</div>
               <div className="text-xs text-gray-500">сданных объектов</div>
             </div>
           </motion.div>
