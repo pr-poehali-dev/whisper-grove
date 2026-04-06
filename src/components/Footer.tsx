@@ -6,7 +6,7 @@ export function Footer() {
       <div className="container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-sm">
-            © 2024 ООО «ИнжСистемы». Все права защищены.
+            © 2024 ООО «ИнженерТехМонтаж». Все права защищены.
             <a href="#" className="ml-3 hover:text-white transition-colors underline underline-offset-2">
               Политика обработки персональных данных
             </a>

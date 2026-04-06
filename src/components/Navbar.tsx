@@ -19,9 +19,9 @@ export function Navbar() {
             <Icon name="Phone" size={14} />
             +7 (495) 123-45-67
           </a>
-          <a href="mailto:info@inzhsys.ru" className="flex items-center gap-1.5 hover:text-indigo-600 transition-colors">
+          <a href="mailto:info@inzhtm.ru" className="flex items-center gap-1.5 hover:text-indigo-600 transition-colors">
             <Icon name="Mail" size={14} />
-            info@inzhsys.ru
+            info@inzhtm.ru
           </a>
         </div>
 

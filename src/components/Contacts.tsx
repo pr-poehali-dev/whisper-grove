@@ -31,7 +31,7 @@ export function Contacts() {
             <div className="flex flex-col gap-5 mb-8">
               {[
                 { icon: "Phone", label: "Телефон", value: "+7 (495) 123-45-67", href: "tel:+74951234567" },
-                { icon: "Mail", label: "E-mail", value: "info@inzhsys.ru", href: "mailto:info@inzhsys.ru" },
+                { icon: "Mail", label: "E-mail", value: "info@inzhtm.ru", href: "mailto:info@inzhtm.ru" },
                 { icon: "MapPin", label: "Офис", value: "г. Москва, ул. Промышленная, 10, оф. 305", href: "#" },
               ].map((c) => (
                 <a key={c.label} href={c.href} className="flex items-start gap-4 group">
@@ -49,7 +49,7 @@ export function Contacts() {
             <div className="bg-white rounded-2xl border border-slate-200 p-5">
               <div className="text-sm font-semibold text-gray-700 mb-3">Реквизиты компании</div>
               <div className="text-sm text-gray-500 flex flex-col gap-1">
-                <div>ООО «ИнжСистемы»</div>
+                <div>ООО «ИнженерТехМонтаж»</div>
                 <div>ИНН: 7701234567 / КПП: 770101001</div>
                 <div>ОГРН: 1237700000000</div>
               </div>
