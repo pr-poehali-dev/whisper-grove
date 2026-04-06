@@ -90,15 +90,7 @@ export function Services() {
           })}
         </div>
 
-        <motion.p
-          className="text-center text-sm text-gray-400 mt-6"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          * А также системы дымоудаления, резервного питания — по запросу
-        </motion.p>
+
       </div>
     </section>
   )
