@@ -4,7 +4,7 @@ import Icon from "@/components/ui/icon"
 const stats = [
   { value: "50+", label: "сданных объектов" },
   { value: "15+", label: "инженерных систем" },
-  { value: "8 лет", label: "на рынке Красноярска" },
+  { value: "10 лет", label: "на рынке Красноярска" },
   { value: "24/7", label: "аварийный выезд" },
 ]
 
