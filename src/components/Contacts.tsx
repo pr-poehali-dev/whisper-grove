@@ -30,9 +30,9 @@ export function Contacts() {
           >
             <div className="flex flex-col gap-5 mb-8">
               {[
-                { icon: "Phone", label: "Телефон", value: "+7 (495) 123-45-67", href: "tel:+74951234567" },
-                { icon: "Mail", label: "E-mail", value: "info@inzhtm.ru", href: "mailto:info@inzhtm.ru" },
-                { icon: "MapPin", label: "Офис", value: "г. Москва, ул. Промышленная, 10, оф. 305", href: "#" },
+                { icon: "Phone", label: "Телефон", value: "+7 (923) 783-82-88", href: "tel:+79237838288" },
+                { icon: "Mail", label: "E-mail", value: "info@itmkrsk.ru", href: "mailto:info@itmkrsk.ru" },
+                { icon: "MapPin", label: "Адрес", value: "660012, г. Красноярск, ул. Дмитрия Мартынова, д. 33, кв. 61", href: "#" },
               ].map((c) => (
                 <a key={c.label} href={c.href} className="flex items-start gap-4 group">
                   <div className="w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center flex-shrink-0 group-hover:bg-indigo-100 transition-colors">
@@ -50,14 +50,15 @@ export function Contacts() {
               <div className="text-sm font-semibold text-gray-700 mb-3">Реквизиты компании</div>
               <div className="text-sm text-gray-500 flex flex-col gap-1">
                 <div>ООО «ИнженерТехМонтаж»</div>
-                <div>ИНН: 7701234567 / КПП: 770101001</div>
-                <div>ОГРН: 1237700000000</div>
+                <div>ИНН: 2464124754 / КПП: 246601001</div>
+                <div>ОГРН: 1162468052207</div>
+                <div>БИК: 045004774</div>
               </div>
             </div>
 
             <div className="mt-6 rounded-2xl overflow-hidden border border-slate-200 h-52">
               <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=37.617617,55.755864&z=12"
+                src="https://yandex.ru/map-widget/v1/?ll=92.852572,56.010563&z=14&pt=92.852572,56.010563,pm2rdm"
                 width="100%"
                 height="100%"
                 frameBorder="0"

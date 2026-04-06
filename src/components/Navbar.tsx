@@ -15,13 +15,13 @@ export function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-6 text-sm text-gray-600">
-          <a href="tel:+74951234567" className="flex items-center gap-1.5 hover:text-indigo-600 transition-colors">
+          <a href="tel:+79237838288" className="flex items-center gap-1.5 hover:text-indigo-600 transition-colors">
             <Icon name="Phone" size={14} />
-            +7 (495) 123-45-67
+            +7 (923) 783-82-88
           </a>
-          <a href="mailto:info@inzhtm.ru" className="flex items-center gap-1.5 hover:text-indigo-600 transition-colors">
+          <a href="mailto:info@itmkrsk.ru" className="flex items-center gap-1.5 hover:text-indigo-600 transition-colors">
             <Icon name="Mail" size={14} />
-            info@inzhtm.ru
+            info@itmkrsk.ru
           </a>
         </div>
 
