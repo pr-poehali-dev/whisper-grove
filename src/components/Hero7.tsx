@@ -37,7 +37,7 @@ const Hero7 = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
             >
-              Проектирование, монтаж и сервис систем: от ОПС и СКУД до волоконной оптики и водоподготовки. Работаем с офисами, складами, ЖК и производствами.
+              Проектирование, монтаж и сервис систем: от ОПС и СКУД до волоконной оптики и водоподготовки.
             </motion.p>
 
             <motion.div
@@ -69,7 +69,7 @@ const Hero7 = () => {
             >
               {[
                 { icon: "Clock", text: "Выезд за 24 часа" },
-                { icon: "Award", text: "Гарантия 36 месяцев" },
+                { icon: "Award", text: "Гарантия 12 месяцев" },
                 { icon: "FileCheck", text: "Лицензии МЧС и ФСБ" },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-2 text-sm text-gray-600">
@@ -89,8 +89,8 @@ const Hero7 = () => {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/afae11c2-1822-40f3-999b-ca317e173132.jpg"
-                alt="Серверная и инженерные системы"
+                src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=900&q=85"
+                alt="Системы видеонаблюдения"
                 className="w-full h-80 lg:h-96 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/40 to-transparent" />

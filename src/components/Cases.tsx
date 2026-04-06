@@ -6,6 +6,7 @@ const cases = [
     type: "ЖКХ",
     icon: "Building2",
     title: "УК «ЖилКомРазвитие»",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
     tags: ["СКУД", "ОПС", "СВН"],
     works: [
       "Монтаж и обслуживание СКУД в жилых домах",
@@ -17,6 +18,7 @@ const cases = [
     type: "Строительство",
     icon: "HardHat",
     title: "ООО «АРБАН»",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80",
     tags: ["СКУД", "ОПС", "СОУЭ", "СВН", "СКС", "Телефония", "Усиление связи", "Часофикация"],
     works: [
       "Монтаж СКУД, ОПС, СОУЭ и видеонаблюдения",
@@ -28,6 +30,7 @@ const cases = [
     type: "Фитнес",
     icon: "Dumbbell",
     title: "ООО «Единый Фитнес»",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80",
     tags: ["СКУД", "ОПС", "СВН"],
     works: [
       "Монтаж и обслуживание СКУД",
@@ -39,6 +42,7 @@ const cases = [
     type: "Строительство",
     icon: "Wrench",
     title: "ООО «СТРОЙ-М»",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80",
     tags: ["СКУД", "ОПС", "СВН"],
     works: [
       "Монтаж и обслуживание СКУД",
@@ -67,12 +71,16 @@ export function Cases() {
           {cases.map((c, i) => (
             <motion.div
               key={c.title}
-              className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-indigo-200 transition-all p-6"
+              className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-indigo-200 transition-all overflow-hidden"
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
+              <div className="h-44 overflow-hidden">
+                <img src={c.image} alt={c.title} className="w-full h-full object-cover" />
+              </div>
+              <div className="p-6">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-11 h-11 rounded-xl bg-indigo-50 flex items-center justify-center flex-shrink-0">
                   <Icon name={c.icon as "Building2"} size={22} className="text-indigo-600" />
@@ -98,6 +106,7 @@ export function Cases() {
                     {t}
                   </span>
                 ))}
+              </div>
               </div>
             </motion.div>
           ))}
