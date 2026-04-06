@@ -1,43 +1,54 @@
-import { useState } from "react"
 import { motion } from "framer-motion"
-
-const filters = ["Все", "Офис", "Склад", "ЖК", "Производство"]
+import Icon from "@/components/ui/icon"
 
 const cases = [
   {
-    type: "Склад",
-    title: "Логистический комплекс 5 000 м²",
-    desc: "Смонтировали ОПС + АСПТ + видеонаблюдение (64 камеры). Срок: 14 дней.",
-    tags: ["ОПС", "АСПТ", "СВН"],
-    img: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/afae11c2-1822-40f3-999b-ca317e173132.jpg",
+    type: "ЖКХ",
+    icon: "Building2",
+    title: "УК «ЖилКомРазвитие»",
+    tags: ["СКУД", "ОПС", "СВН"],
+    works: [
+      "Монтаж и обслуживание СКУД в жилых домах",
+      "Монтаж и обслуживание охранно-пожарной сигнализации",
+      "Монтаж и обслуживание систем видеонаблюдения",
+    ],
   },
   {
-    type: "Офис",
-    title: "Бизнес-центр класса А, 12 этажей",
-    desc: "Проектирование и монтаж СКУД, СКС и телефонии. Интеграция в единую платформу.",
-    tags: ["СКУД", "СКС", "Телефония"],
-    img: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/c144be01-90f5-4b8c-a7ff-3b22cfd5dbac.jpg",
+    type: "Строительство",
+    icon: "HardHat",
+    title: "ООО «АРБАН»",
+    tags: ["СКУД", "ОПС", "СОУЭ", "СВН", "СКС", "Телефония", "Усиление связи", "Часофикация"],
+    works: [
+      "Монтаж СКУД, ОПС, СОУЭ и видеонаблюдения",
+      "Монтаж структурированных кабельных систем",
+      "Монтаж телефонии, усиления сотовой связи и часофикации",
+    ],
   },
   {
-    type: "ЖК",
-    title: "Жилой комплекс на 450 квартир",
-    desc: "Система видеонаблюдения (120 камер), домофония, контроль доступа на КПП.",
-    tags: ["СВН", "СКУД", "СОУЭ"],
-    img: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/03654ba3-ff8a-4908-b41e-2fa290faf613.jpg",
+    type: "Фитнес",
+    icon: "Dumbbell",
+    title: "ООО «Единый Фитнес»",
+    tags: ["СКУД", "ОПС", "СВН"],
+    works: [
+      "Монтаж и обслуживание СКУД",
+      "Монтаж и обслуживание охранно-пожарной сигнализации",
+      "Монтаж и обслуживание систем видеонаблюдения",
+    ],
   },
   {
-    type: "Производство",
-    title: "Завод машиностроения 20 000 м²",
-    desc: "Полный цикл: ОПС, АСПТ, ВОЛС, системы водоподготовки. Срок реализации — 45 дней.",
-    tags: ["ОПС", "АСПТ", "ВОЛС", "Водоподготовка"],
-    img: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/afae11c2-1822-40f3-999b-ca317e173132.jpg",
+    type: "Строительство",
+    icon: "Wrench",
+    title: "ООО «СТРОЙ-М»",
+    tags: ["СКУД", "ОПС", "СВН"],
+    works: [
+      "Монтаж и обслуживание СКУД",
+      "Монтаж и обслуживание охранно-пожарной сигнализации",
+      "Монтаж и обслуживание систем видеонаблюдения",
+    ],
   },
 ]
 
 export function Cases() {
-  const [active, setActive] = useState("Все")
-  const filtered = active === "Все" ? cases : cases.filter((c) => c.type === active)
-
   return (
     <section className="py-20 bg-slate-50">
       <div className="container">
@@ -48,52 +59,45 @@ export function Cases() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-3xl lg:text-4xl font-extrabold font-heading text-gray-900 mb-3">Реализованные объекты</h2>
-          <p className="text-gray-500 text-lg">Более 200 объектов по всей России</p>
+          <h2 className="text-3xl lg:text-4xl font-extrabold font-heading text-gray-900 mb-3">Реализованные проекты</h2>
+          <p className="text-gray-500 text-lg">Работаем с компаниями разных отраслей по всему Красноярскому краю</p>
         </motion.div>
 
-        <div className="flex flex-wrap gap-2 justify-center mb-8">
-          {filters.map((f) => (
-            <button
-              key={f}
-              onClick={() => setActive(f)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                active === f
-                  ? "bg-indigo-600 text-white shadow-sm"
-                  : "bg-white border border-slate-200 text-gray-600 hover:border-indigo-300"
-              }`}
-            >
-              {f}
-            </button>
-          ))}
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {filtered.map((c, i) => (
+          {cases.map((c, i) => (
             <motion.div
               key={c.title}
-              className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
+              className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-indigo-200 transition-all p-6"
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <div className="h-48 overflow-hidden relative">
-                <img src={c.img} alt={c.title} className="w-full h-full object-cover" />
-                <span className="absolute top-3 left-3 bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                  {c.type}
-                </span>
-              </div>
-              <div className="p-5">
-                <h3 className="font-bold text-gray-900 font-heading mb-2">{c.title}</h3>
-                <p className="text-gray-500 text-sm mb-4">{c.desc}</p>
-                <div className="flex flex-wrap gap-2">
-                  {c.tags.map((t) => (
-                    <span key={t} className="bg-indigo-50 text-indigo-700 text-xs font-medium px-2.5 py-1 rounded-full">
-                      {t}
-                    </span>
-                  ))}
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-11 h-11 rounded-xl bg-indigo-50 flex items-center justify-center flex-shrink-0">
+                  <Icon name={c.icon as "Building2"} size={22} className="text-indigo-600" />
                 </div>
+                <div>
+                  <span className="text-xs font-medium text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-full">{c.type}</span>
+                  <h3 className="font-bold text-gray-900 font-heading mt-1 text-lg">{c.title}</h3>
+                </div>
+              </div>
+
+              <ul className="flex flex-col gap-2 mb-4">
+                {c.works.map((w) => (
+                  <li key={w} className="flex items-start gap-2 text-sm text-gray-600">
+                    <Icon name="CheckCircle2" size={15} className="text-indigo-400 mt-0.5 flex-shrink-0" />
+                    {w}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="flex flex-wrap gap-2">
+                {c.tags.map((t) => (
+                  <span key={t} className="bg-slate-100 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full">
+                    {t}
+                  </span>
+                ))}
               </div>
             </motion.div>
           ))}
