@@ -57,6 +57,27 @@ export function Services() {
           <p className="text-gray-500 text-lg">Берёмся за любую задачу — от одной системы до полного оснащения объекта</p>
         </motion.div>
 
+        {/* Photo banner */}
+        <motion.div
+          className="relative rounded-2xl overflow-hidden mb-10 h-56 lg:h-72"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
+          <img
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=85"
+            alt="Инженерные системы"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/80 to-indigo-900/30 flex items-center px-10">
+            <div className="text-white max-w-lg">
+              <div className="text-3xl lg:text-4xl font-extrabold font-heading mb-2">Под ключ</div>
+              <div className="text-indigo-200 text-lg">Проектирование → Монтаж → Сдача → Обслуживание</div>
+            </div>
+          </div>
+        </motion.div>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {groups.map((group, gi) => {
             const c = colorMap[group.color]
@@ -89,8 +110,6 @@ export function Services() {
             )
           })}
         </div>
-
-
       </div>
     </section>
   )

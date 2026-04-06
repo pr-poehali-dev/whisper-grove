@@ -1,6 +1,13 @@
 import { motion } from "framer-motion"
 import Icon from "@/components/ui/icon"
 
+const stats = [
+  { value: "50+", label: "сданных объектов" },
+  { value: "15+", label: "инженерных систем" },
+  { value: "8 лет", label: "на рынке Красноярска" },
+  { value: "24/7", label: "аварийный выезд" },
+]
+
 const items = [
   {
     icon: "Car",
@@ -49,6 +56,29 @@ export function Advantages() {
             Почему выбирают нас
           </h2>
           <p className="text-gray-500 text-lg">Надёжный партнёр для инженерного оснащения объектов любого масштаба</p>
+        </motion.div>
+
+        {/* Stats strip */}
+        <motion.div
+          className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12 bg-indigo-600 rounded-2xl p-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          {stats.map((s, i) => (
+            <motion.div
+              key={s.label}
+              className="text-center"
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+            >
+              <div className="text-4xl font-extrabold text-white font-heading mb-1">{s.value}</div>
+              <div className="text-indigo-200 text-sm">{s.label}</div>
+            </motion.div>
+          ))}
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

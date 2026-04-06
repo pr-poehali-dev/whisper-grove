@@ -89,8 +89,8 @@ const Hero7 = () => {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=900&q=85"
-                alt="Системы видеонаблюдения"
+                src="https://images.unsplash.com/photo-1581092921461-39b9d08a9b21?w=900&q=85"
+                alt="Инженерные системы безопасности"
                 className="w-full h-80 lg:h-96 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/40 to-transparent" />
