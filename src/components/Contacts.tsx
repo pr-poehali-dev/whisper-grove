@@ -77,9 +77,8 @@ export function Contacts() {
           >
             <h3 className="font-bold text-gray-900 font-heading mb-5">Напишите нам</h3>
             <div className="flex flex-col gap-4">
-              <Input placeholder="Ваше имя и должность" />
-              <Input placeholder="Компания" />
-              <Input placeholder="Телефон или e-mail" />
+              <Input placeholder="Ваше имя" />
+              <Input placeholder="Телефон" />
               <Textarea placeholder="Опишите задачу: тип объекта, площадь, нужные системы..." rows={4} />
               <Button className="bg-indigo-600 hover:bg-indigo-700 text-white w-full">
                 Отправить заявку
