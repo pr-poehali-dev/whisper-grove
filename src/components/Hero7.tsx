@@ -31,14 +31,24 @@ const Hero7 = () => {
               : от проекта до сдачи.
             </motion.h1>
 
-            <motion.p
-              className="text-gray-500 text-lg mb-8 leading-relaxed"
+            <motion.ul
+              className="flex flex-col gap-2 mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
             >
-              Проектирование, монтаж и сервис систем: от ОПС и СКУД до волоконной оптики и водоподготовки.
-            </motion.p>
+              {[
+                "Закажите монтаж систем безопасности",
+                "Сократите операционные расходы",
+                "Обеспечьте безопасность по всем нормам",
+                "Управляйте объектом с любого устройства",
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2 text-gray-700 text-base">
+                  <Icon name="CheckCircle2" size={18} className="text-indigo-500 flex-shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </motion.ul>
 
             <motion.div
               className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm"
@@ -50,7 +60,7 @@ const Hero7 = () => {
                 Оставьте заявку — получите смету и КП за 24 часа
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Input placeholder="Ваш телефон или e-mail" className="flex-1" />
+                <Input placeholder="Ваш телефон" className="flex-1" />
                 <Button className="bg-indigo-600 hover:bg-indigo-700 text-white whitespace-nowrap">
                   Получить расчёт
                 </Button>

@@ -18,10 +18,9 @@ export function Navbar() {
               Пн–Пт, 09:00–18:00
             </span>
           </div>
-          <div className="flex items-center gap-4 text-indigo-200">
-            <a href="mailto:info@itmkrsk.ru" className="flex items-center gap-1.5 hover:text-white transition-colors">
-              <Icon name="Mail" size={14} />
-              info@itmkrsk.ru
+          <div className="flex items-center gap-4">
+            <a href="#contacts" className="bg-white/20 hover:bg-white/30 text-white text-xs font-medium px-3 py-1 rounded-md transition-colors">
+              Заказать обратный звонок
             </a>
           </div>
         </div>
@@ -39,20 +38,15 @@ export function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center gap-8 text-base font-semibold text-gray-700">
-            <a href="#" className="hover:text-indigo-600 transition-colors tracking-wide">Услуги</a>
-            <a href="#" className="hover:text-indigo-600 transition-colors tracking-wide">Проекты</a>
-            <a href="#" className="hover:text-indigo-600 transition-colors tracking-wide">О компании</a>
+            <a href="#catalog" className="hover:text-indigo-600 transition-colors tracking-wide">Услуги</a>
             <a href="#contacts" className="hover:text-indigo-600 transition-colors tracking-wide">Контакты</a>
           </div>
 
           <div className="flex items-center gap-4">
-            <a href="tel:+79237838288" className="hidden lg:flex items-center gap-2 text-gray-800 font-bold text-lg tracking-wide hover:text-indigo-600 transition-colors">
+            <a href="tel:+79237838288" className="hidden lg:flex items-center gap-2 text-gray-800 font-bold text-lg hover:text-indigo-600 transition-colors">
               <Icon name="Phone" size={18} className="text-indigo-600" />
-              +7 (923) 783-82-88
+              +7(923)783-82-88
             </a>
-            <Button size="default" className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-base px-5">
-              Заказать обратный звонок
-            </Button>
           </div>
         </div>
       </nav>

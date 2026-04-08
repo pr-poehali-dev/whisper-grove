@@ -85,11 +85,23 @@ const catalog = [
     desc: "Техническое обслуживание всех инженерных систем объекта по договору. Аварийный выезд 24/7.",
     image: "https://images.unsplash.com/photo-1581092921461-39b9d08a9b21?w=600&q=80",
   },
+  {
+    name: "СОУЭ",
+    full: "Оповещение и управление эвакуацией",
+    desc: "Монтаж систем речевого оповещения, световых табло и управления эвакуацией по нормам МЧС.",
+    image: "https://images.unsplash.com/photo-1582139329536-e7284fece509?w=600&q=80",
+  },
+  {
+    name: "Часофикация",
+    full: "Системы часофикации",
+    desc: "Монтаж систем единого времени: первичные и вторичные часы для предприятий и объектов.",
+    image: "https://images.unsplash.com/photo-1516387938699-a93567ec168e?w=600&q=80",
+  },
 ]
 
 export function ServiceCatalog() {
   return (
-    <section className="py-20 bg-white">
+    <section id="catalog" className="py-20 bg-white">
       <div className="container">
         <motion.div
           className="text-center mb-12"
