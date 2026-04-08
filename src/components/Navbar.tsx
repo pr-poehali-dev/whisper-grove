@@ -16,16 +16,16 @@ export function Navbar() {
 
         {/* Навигация */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
-          <span className="flex items-center gap-1.5 text-slate-400">
+          <span className="flex items-center gap-1.5 text-slate-400 whitespace-nowrap">
             <Icon name="MapPin" size={13} />
             г. Красноярск, ул. Дмитрия Мартынова
           </span>
-          <span className="flex items-center gap-1.5 text-slate-400">
+          <span className="flex items-center gap-1.5 text-slate-400 whitespace-nowrap">
             <Icon name="Clock" size={13} />
             Пн–Пт, 09:00–18:00
           </span>
-          <a href="#catalog" className="hover:text-white transition-colors">Услуги</a>
-          <a href="#contacts" className="hover:text-white transition-colors">Контакты</a>
+          <a href="#catalog" className="hover:text-white transition-colors whitespace-nowrap">Услуги</a>
+          <a href="#contacts" className="hover:text-white transition-colors whitespace-nowrap">Контакты</a>
         </nav>
 
         {/* Телефон + кнопка */}
