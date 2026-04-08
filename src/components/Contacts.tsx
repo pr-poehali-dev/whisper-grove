@@ -1,7 +1,6 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import Icon from "@/components/ui/icon"
 
 export function Contacts() {
@@ -32,7 +31,7 @@ export function Contacts() {
               {[
                 { icon: "Phone", label: "Телефон", value: "+7 (923) 783-82-88", href: "tel:+79237838288" },
                 { icon: "Mail", label: "E-mail", value: "info@itmkrsk.ru", href: "mailto:info@itmkrsk.ru" },
-                { icon: "MapPin", label: "Адрес", value: "660012, г. Красноярск, ул. Дмитрия Мартынова, д. 33, кв. 61", href: "#" },
+                { icon: "MapPin", label: "Адрес", value: "660012, г. Красноярск, ул. Дмитрия Мартынова, 33", href: "#" },
               ].map((c) => (
                 <a key={c.label} href={c.href} className="flex items-start gap-4 group">
                   <div className="w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center flex-shrink-0 group-hover:bg-indigo-100 transition-colors">
@@ -75,13 +74,13 @@ export function Contacts() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="font-bold text-gray-900 font-heading mb-5">Напишите нам</h3>
+            <h3 className="font-bold text-gray-900 font-heading mb-2">Остались вопросы?</h3>
+            <p className="text-gray-500 text-sm mb-5">Укажите свои данные и мы вам позвоним.</p>
             <div className="flex flex-col gap-4">
               <Input placeholder="Ваше имя" />
               <Input placeholder="Телефон" />
-              <Textarea placeholder="Опишите задачу: тип объекта, площадь, нужные системы..." rows={4} />
               <Button className="bg-indigo-600 hover:bg-indigo-700 text-white w-full">
-                Отправить заявку
+                Перезвоните мне
               </Button>
               <p className="text-xs text-gray-400 text-center flex items-center justify-center gap-1">
                 <Icon name="Lock" size={11} />

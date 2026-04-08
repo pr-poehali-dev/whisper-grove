@@ -15,13 +15,13 @@ export function Footer() {
           <div className="flex items-center gap-3">
             <span className="text-sm">Написать в мессенджер:</span>
             <a
-              href="https://wa.me/74951234567"
+              href="https://vk.me/+79237838288"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 bg-green-600 hover:bg-green-700 text-white text-sm font-medium px-3 py-1.5 rounded-lg transition-colors"
+              className="flex items-center gap-1.5 bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium px-3 py-1.5 rounded-lg transition-colors"
             >
               <Icon name="MessageCircle" size={14} />
-              WhatsApp
+              Max
             </a>
             <a
               href="https://t.me/inzhsys"
