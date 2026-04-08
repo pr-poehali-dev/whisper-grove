@@ -10,7 +10,7 @@ export function Navbar() {
           <img
             src="https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/bucket/7793d0d8-e24e-47d0-8735-3b0e56f30686.png"
             alt="ИнженерТехМонтаж"
-            className="h-12 w-auto"
+            className="h-20 w-auto mix-blend-lighten"
           />
         </a>
 
