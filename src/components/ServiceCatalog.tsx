@@ -49,6 +49,42 @@ const catalog = [
     desc: "Репиторы и распределённые антенные системы для уверенного приёма в здании.",
     image: "https://images.unsplash.com/photo-1516397281156-ca07cf9746fc?w=600&q=80",
   },
+  {
+    name: "Вентиляция",
+    full: "Вентиляция и приточно-вытяжные системы",
+    desc: "Проектирование, монтаж и обслуживание приточной, вытяжной и приточно-вытяжной вентиляции.",
+    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80",
+  },
+  {
+    name: "Кондиционирование",
+    full: "Системы кондиционирования",
+    desc: "Монтаж сплит-систем, мультизональных VRF/VRV систем, чиллеров. Сервис и заправка.",
+    image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80",
+  },
+  {
+    name: "Электромонтаж",
+    full: "Электромонтажные работы",
+    desc: "Монтаж электрощитов, прокладка кабелей, установка розеток, автоматов и освещения.",
+    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&q=80",
+  },
+  {
+    name: "Водоподготовка",
+    full: "Водоподготовка и водоочистка",
+    desc: "Обслуживание бассейнов, саун, хаммамов и СПА. Монтаж систем фильтрации и очистки воды.",
+    image: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80",
+  },
+  {
+    name: "Ремонт и отделка",
+    full: "Ремонтно-отделочные работы",
+    desc: "Комплексный ремонт помещений: от черновой отделки до финишной отделки под ключ.",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80",
+  },
+  {
+    name: "Обслуживание",
+    full: "Сервисное обслуживание систем",
+    desc: "Техническое обслуживание всех инженерных систем объекта по договору. Аварийный выезд 24/7.",
+    image: "https://images.unsplash.com/photo-1581092921461-39b9d08a9b21?w=600&q=80",
+  },
 ]
 
 export function ServiceCatalog() {
@@ -74,13 +110,14 @@ export function ServiceCatalog() {
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.06 }}
+              transition={{ duration: 0.5, delay: (i % 4) * 0.06 }}
             >
               <div className="relative h-44 overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent" />
                 <div className="absolute bottom-3 left-3">

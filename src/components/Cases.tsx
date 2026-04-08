@@ -31,11 +31,12 @@ const cases = [
     icon: "Dumbbell",
     title: "ООО «Единый Фитнес»",
     image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80",
-    tags: ["СКУД", "ОПС", "СВН"],
+    tags: ["СКУД", "ОПС", "СОУЭ", "СВН", "СКС", "Телефония", "Усиление связи", "Часофикация", "Водоподготовка"],
     works: [
-      "Монтаж и обслуживание СКУД",
-      "Монтаж и обслуживание охранно-пожарной сигнализации",
-      "Монтаж и обслуживание систем видеонаблюдения",
+      "Обслуживание тренажёров, водоподготовка (бассейн, сауна)",
+      "Монтаж СКУД, ОПС, СОУЭ и видеонаблюдения",
+      "Монтаж структурированных кабельных систем",
+      "Монтаж телефонии, усиления сотовой связи и часофикации",
     ],
   },
   {
@@ -78,7 +79,7 @@ export function Cases() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
               <div className="h-44 overflow-hidden">
-                <img src={c.image} alt={c.title} className="w-full h-full object-cover" />
+                <img src={c.image} alt={c.title} className="w-full h-full object-cover" loading="lazy" decoding="async" />
               </div>
               <div className="p-6">
                 <div className="flex items-start gap-4 mb-4">

@@ -17,7 +17,7 @@ const Hero7 = () => {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
             >
               <Icon name="Shield" size={14} />
-              Более 15 инженерных систем под ключ
+              Более 15 инженерных систем
             </motion.div>
 
             <motion.h1
@@ -26,9 +26,9 @@ const Hero7 = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             >
-              Комплексные инженерные решения для{" "}
-              <span className="text-indigo-600">безопасности и связи</span>{" "}
-              вашего объекта
+              Инженерные системы{" "}
+              <span className="text-indigo-600">«Под ключ»</span>
+              : от проекта до сдачи.
             </motion.h1>
 
             <motion.p
@@ -70,7 +70,7 @@ const Hero7 = () => {
               {[
                 { icon: "Clock", text: "Выезд за 24 часа" },
                 { icon: "Award", text: "Гарантия 12 месяцев" },
-                { icon: "FileCheck", text: "Лицензии МЧС и ФСБ" },
+                { icon: "FileCheck", text: "Лицензии МЧС и СРО" },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-2 text-sm text-gray-600">
                   <Icon name={item.icon as "Clock"} size={16} className="text-indigo-500" />
@@ -92,6 +92,7 @@ const Hero7 = () => {
                 src="https://images.unsplash.com/photo-1581092921461-39b9d08a9b21?w=900&q=85"
                 alt="Инженерные системы безопасности"
                 className="w-full h-80 lg:h-96 object-cover"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/40 to-transparent" />
             </div>
@@ -100,10 +101,12 @@ const Hero7 = () => {
                 src="https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/03654ba3-ff8a-4908-b41e-2fa290faf613.jpg"
                 alt="Инженер на объекте"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="absolute -top-3 -right-3 bg-white rounded-xl p-3 shadow-lg border border-slate-100">
-              <div className="text-2xl font-bold text-indigo-600 font-heading">50+</div>
+              <div className="text-2xl font-bold text-indigo-600 font-heading">70+</div>
               <div className="text-xs text-gray-500">сданных объектов</div>
             </div>
           </motion.div>

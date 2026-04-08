@@ -5,9 +5,9 @@ const steps = [
   { icon: "PhoneCall", title: "Заявка", desc: "Оставьте заявку или позвоните — ответим в течение 1 часа." },
   { icon: "MapPin", title: "Выезд", desc: "Бесплатный выезд инженера на объект в течение 24 часов." },
   { icon: "FileText", title: "Смета", desc: "Подготовим подробную смету и КП, согласуем с вами." },
-  { icon: "Wrench", title: "Монтаж", desc: "Монтируем, прокладываем кабели, настраиваем и тестируем." },
+  { icon: "Wrench", title: "Монтаж", desc: "Монтажные и пусконаладочные работы систем." },
   { icon: "ClipboardCheck", title: "Сдача", desc: "Подписываем акты, передаём исполнительную документацию." },
-  { icon: "HeadphonesIcon", title: "Сервис", desc: "Постгарантийное обслуживание и аварийный выезд 24/7." },
+  { icon: "HeadphonesIcon", title: "Сервис", desc: "Заключение договора на обслуживание. Обслуживаем сами либо передаём функции обученному сотруднику заказчика." },
 ]
 
 export function HowWeWork() {
@@ -35,9 +35,11 @@ export function HowWeWork() {
             transition={{ duration: 0.7 }}
           >
             <img
-              src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=85"
+              src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=85"
               alt="Монтаж инженерных систем"
-              className="w-full h-full object-cover min-h-[400px]"
+              className="w-full h-full object-cover min-h-[400px] max-h-[500px] lg:max-h-none"
+              loading="lazy"
+              decoding="async"
             />
           </motion.div>
 

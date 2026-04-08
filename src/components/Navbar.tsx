@@ -10,7 +10,7 @@ export function Navbar() {
           <img
             src="https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/bucket/b6620dc8-9f2e-4d34-81e9-7e3598ca8be0.png"
             alt="ИнженерТехМонтаж"
-            className="h-16 w-auto"
+            className="h-64 w-auto"
           />
         </div>
 
@@ -26,7 +26,7 @@ export function Navbar() {
         </div>
 
         <Button size="sm" className="bg-indigo-600 hover:bg-indigo-700 text-white">
-          Проконсультироваться
+          Заказать обратный звонок
         </Button>
       </div>
     </nav>
