@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input"
 import Icon from "@/components/ui/icon"
 
 const catalog = [
+  { name: "Домофоны", full: "Домофонные системы", desc: "Монтаж и обслуживание аудио- и видеодомофонов, IP-домофонов для жилых и коммерческих объектов.", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" },
   { name: "СКУД", full: "Контроль доступа", desc: "Турникеты, считыватели карт, биометрия — разграничиваем доступ на любом объекте.", image: "https://images.unsplash.com/photo-1558002038-1055e2dae1d7?w=600&q=80" },
   { name: "ОПС", full: "Охранно-пожарная сигнализация", desc: "Датчики дыма, тепла, движения. Автоматическое оповещение и вызов служб.", image: "https://images.unsplash.com/photo-1582139329536-e7284fece509?w=600&q=80" },
   { name: "Видеонаблюдение", full: "Системы видеонаблюдения", desc: "IP-камеры, аналоговые системы, видеоаналитика, архив записей на сервере.", image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=600&q=80" },

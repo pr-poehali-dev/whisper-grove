@@ -11,10 +11,10 @@ const Hero7 = () => {
         <img
           src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=85"
           alt="Инженерные системы"
-          className="w-full h-full object-cover opacity-25"
+          className="w-full h-full object-cover opacity-45"
           decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-900/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/70 to-slate-900/30" />
       </div>
 
       <div className="relative container">

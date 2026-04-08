@@ -29,17 +29,17 @@ export function Navbar() {
         </nav>
 
         {/* Телефон + кнопка */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 flex-shrink-0">
           <a
             href="tel:+79237838288"
-            className="hidden lg:flex items-center gap-2 text-white font-bold text-base hover:text-indigo-300 transition-colors"
+            className="hidden lg:flex items-center gap-2 text-white font-bold text-base hover:text-indigo-300 transition-colors whitespace-nowrap"
           >
             <Icon name="Phone" size={16} className="text-indigo-400" />
             +7(923)783-82-88
           </a>
           <Button
             asChild
-            className="bg-indigo-500 hover:bg-indigo-400 text-white font-semibold text-sm px-5 py-2.5 rounded-lg shadow-md"
+            className="bg-indigo-500 hover:bg-indigo-400 text-white font-semibold text-sm px-5 py-2.5 rounded-lg shadow-md whitespace-nowrap"
           >
             <a href="#contacts">Заказать обратный звонок</a>
           </Button>
