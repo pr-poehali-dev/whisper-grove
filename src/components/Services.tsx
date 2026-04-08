@@ -29,7 +29,18 @@ const groups = [
     services: [
       { icon: "Phone", name: "Телефония", desc: "Офисные АТС и телефонные сети" },
       { icon: "Signal", name: "Усиление сигнала", desc: "Усиление сотовой связи на объекте" },
-      { icon: "Droplets", name: "Водоподготовка", desc: "Автоматическое дозирование реагентов" },
+      { icon: "Droplets", name: "Водоподготовка", desc: "Обслуживание бассейнов, сауны, хаммамы/СПА" },
+    ],
+  },
+  {
+    title: "Инженерные и отделочные работы",
+    color: "emerald",
+    services: [
+      { icon: "Wind", name: "Вентиляция", desc: "Приточно-вытяжные системы вентиляции" },
+      { icon: "Thermometer", name: "Кондиционирование", desc: "Монтаж сплит-систем и мультизональных VRF" },
+      { icon: "Zap", name: "Электромонтаж", desc: "Электрощиты, кабели, освещение" },
+      { icon: "HardHat", name: "Ремонт и отделка", desc: "Ремонтно-отделочные работы под ключ" },
+      { icon: "Wrench", name: "Обслуживание", desc: "Сервис всех инженерных систем по договору" },
     ],
   },
 ]
@@ -38,6 +49,7 @@ const colorMap: Record<string, { bg: string; icon: string; badge: string }> = {
   indigo: { bg: "bg-indigo-50", icon: "text-indigo-600", badge: "bg-indigo-100 text-indigo-700" },
   blue: { bg: "bg-blue-50", icon: "text-blue-600", badge: "bg-blue-100 text-blue-700" },
   violet: { bg: "bg-violet-50", icon: "text-violet-600", badge: "bg-violet-100 text-violet-700" },
+  emerald: { bg: "bg-emerald-50", icon: "text-emerald-600", badge: "bg-emerald-100 text-emerald-700" },
 }
 
 export function Services() {
@@ -78,7 +90,7 @@ export function Services() {
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {groups.map((group, gi) => {
             const c = colorMap[group.color]
             return (
