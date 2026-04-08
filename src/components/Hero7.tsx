@@ -41,7 +41,7 @@ const Hero7 = () => {
                 "Закажите монтаж систем безопасности",
                 "Сократите операционные расходы",
                 "Обеспечьте безопасность по всем нормам",
-                "Управляйте объектом с любого устройства",
+                "Приедем на объект бесплатно — сделаем замеры и смету за 24 часа",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-2 text-gray-700 text-base">
                   <Icon name="CheckCircle2" size={18} className="text-indigo-500 flex-shrink-0" />
@@ -62,7 +62,7 @@ const Hero7 = () => {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Input placeholder="Ваш телефон" className="flex-1" />
                 <Button className="bg-indigo-600 hover:bg-indigo-700 text-white whitespace-nowrap">
-                  Получить расчёт
+                  Оставить заявку
                 </Button>
               </div>
               <p className="text-xs text-gray-400 mt-3 flex items-center gap-1">
