@@ -19,7 +19,8 @@ const cases = [
     type: "Строительство",
     icon: "HardHat",
     title: "ООО «АРБАН»",
-    image: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/bucket/d9256071-9778-421c-96fa-9dbd27fb85f3.png",
+    image: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/aa714fdc-0f6f-46a6-b1af-37a62570ec2d.jpg",
+    logo: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/bucket/d9256071-9778-421c-96fa-9dbd27fb85f3.png",
     tags: ["СКУД", "ОПС", "СОУЭ", "СВН", "СКС", "Телефония", "Усиление связи", "Часофикация"],
     works: [
       "Монтаж СКУД, ОПС, СОУЭ и видеонаблюдения",
