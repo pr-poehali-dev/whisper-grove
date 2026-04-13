@@ -6,7 +6,7 @@ const cases = [
     type: "ЖКХ",
     icon: "Building2",
     title: "УК «ЖилКомРазвитие»",
-    image: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/066f6063-313a-4a4c-b26a-db1f75cd45d7.jpg",
+    image: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/bucket/b08cd6dd-e461-4689-9995-3af1314530c2.png",
     tags: ["СКУД", "ОПС", "СВН"],
     works: [
       "Монтаж и обслуживание СКУД в жилых домах",
