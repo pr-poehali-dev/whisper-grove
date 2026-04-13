@@ -32,15 +32,11 @@ const Hero7 = () => {
             </motion.div>
 
             <motion.h1
-              className="text-3xl font-extrabold lg:text-5xl font-heading text-white leading-tight mb-4"
+              className="text-3xl font-extrabold lg:text-5xl font-heading leading-tight mb-4 text-gray-50"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            >
-              Инженерные системы{" "}
-              <span className="text-indigo-400">«Под ключ»</span>
-              : от проекта до сдачи.
-            </motion.h1>
+            >Инженерные системы "под ключ": от проекта до сдачи</motion.h1>
 
             <motion.ul
               className="flex flex-col gap-2.5 mb-8"
