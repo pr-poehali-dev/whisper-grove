@@ -67,9 +67,7 @@ const Hero7 = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
             >
-              <p className="text-sm font-semibold text-white mb-4">
-                Оставьте заявку — получите смету и КП за 24 часа
-              </p>
+              <p className="text-sm font-semibold text-white mb-4">Оставьте заявку — получите смету и КП </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Input
                   placeholder="Ваш телефон"
