@@ -6,7 +6,8 @@ const cases = [
     type: "ЖКХ",
     icon: "Building2",
     title: "УК «ЖилКомРазвитие»",
-    image: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/bucket/b08cd6dd-e461-4689-9995-3af1314530c2.png",
+    image: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/6247eb27-f968-4771-82c1-c1acc864977b.jpg",
+    logo: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/bucket/b08cd6dd-e461-4689-9995-3af1314530c2.png",
     tags: ["СКУД", "ОПС", "СВН"],
     works: [
       "Монтаж и обслуживание СКУД в жилых домах",
@@ -30,7 +31,8 @@ const cases = [
     type: "Фитнес",
     icon: "Dumbbell",
     title: "ООО «Единый Фитнес»",
-    image: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/bucket/c7ea91bc-d2e1-48ad-ba2e-e8a83d80b2eb.png",
+    image: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/277bc382-0262-477f-b8f7-f93c924c3e61.jpg",
+    logo: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/bucket/c7ea91bc-d2e1-48ad-ba2e-e8a83d80b2eb.png",
     tags: ["СКУД", "ОПС", "СОУЭ", "СВН", "СКС", "Телефония", "Усиление связи", "Часофикация", "Водоподготовка"],
     works: [
       "Обслуживание тренажёров, водоподготовка (бассейн, сауна)",
@@ -43,7 +45,8 @@ const cases = [
     type: "Строительство",
     icon: "Wrench",
     title: "ООО «СТРОЙ-М»",
-    image: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/bucket/49b73ebd-8dfb-4dba-bb86-e587b7e54cd6.png",
+    image: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/6a4aa869-6585-4c6f-82cd-21914caf5900.jpg",
+    logo: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/bucket/49b73ebd-8dfb-4dba-bb86-e587b7e54cd6.png",
     tags: ["СКУД", "ОПС", "СВН"],
     works: [
       "Монтаж и обслуживание СКУД",
@@ -78,8 +81,14 @@ export function Cases() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <div className="h-44 overflow-hidden">
+              <div className="h-44 overflow-hidden relative">
                 <img src={c.image} alt={c.title} className="w-full h-full object-cover" loading="lazy" decoding="async" />
+                <div className="absolute inset-0 bg-black/40" />
+                {c.logo && (
+                  <div className="absolute inset-0 flex items-center justify-center p-4">
+                    <img src={c.logo} alt={`${c.title} logo`} className="max-h-24 max-w-[70%] object-contain drop-shadow-lg" loading="lazy" />
+                  </div>
+                )}
               </div>
               <div className="p-6">
                 <div className="flex items-start gap-4 mb-4">
