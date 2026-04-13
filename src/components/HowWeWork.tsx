@@ -35,7 +35,7 @@ export function HowWeWork() {
             transition={{ duration: 0.7 }}
           >
             <img
-              src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=85"
+              src="https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/68856a99-1a1e-4251-9efc-7fca911d02ff.jpg"
               alt="Монтаж инженерных систем"
               className="w-full h-full object-cover min-h-[400px] max-h-[500px] lg:max-h-none"
               loading="lazy"

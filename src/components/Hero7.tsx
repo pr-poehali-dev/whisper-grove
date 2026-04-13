@@ -9,7 +9,7 @@ const Hero7 = () => {
       {/* Фоновое фото */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=85"
+          src="https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/4f422d04-8231-4a10-a746-8ae2214af0a0.jpg"
           alt="Инженерные системы"
           className="w-full h-full object-cover opacity-45"
           decoding="async"
@@ -107,7 +107,7 @@ const Hero7 = () => {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
               <img
-                src="https://images.unsplash.com/photo-1666625560956-dccd93e82278?w=900&q=85"
+                src="https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/b1e478ea-896c-439f-a89b-455fc419701e.jpg"
                 alt="Монтаж инженерных систем"
                 className="w-full h-80 lg:h-96 object-cover"
                 decoding="async"
@@ -116,7 +116,7 @@ const Hero7 = () => {
             </div>
             <div className="absolute -bottom-4 -left-4 rounded-xl overflow-hidden shadow-xl ring-4 ring-slate-800 w-40 h-28">
               <img
-                src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=400&q=80"
+                src="https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/e4c0060b-439a-46fb-9155-fc031e830e0a.jpg"
                 alt="Инженер на объекте"
                 className="w-full h-full object-cover"
                 loading="lazy"
