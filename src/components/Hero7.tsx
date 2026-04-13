@@ -48,7 +48,7 @@ const Hero7 = () => {
                 "Закажите монтаж систем безопасности",
                 "Сократите операционные расходы",
                 "Обеспечьте безопасность по всем нормам",
-                "Приедем на объект бесплатно — сделаем замеры и смету за 24 часа",
+                "Приедем на объект бесплатно — сделаем замеры и смету",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-2 text-slate-300 text-base">
                   <Icon name="CheckCircle2" size={18} className="text-indigo-400 flex-shrink-0" />
