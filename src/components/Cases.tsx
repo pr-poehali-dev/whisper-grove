@@ -6,7 +6,7 @@ const cases = [
     type: "ЖКХ",
     icon: "Building2",
     title: "УК «ЖилКомРазвитие»",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80",
+    image: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/066f6063-313a-4a4c-b26a-db1f75cd45d7.jpg",
     tags: ["СКУД", "ОПС", "СВН"],
     works: [
       "Монтаж и обслуживание СКУД в жилых домах",
@@ -30,7 +30,7 @@ const cases = [
     type: "Фитнес",
     icon: "Dumbbell",
     title: "ООО «Единый Фитнес»",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80",
+    image: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/8b1a11a5-8630-4d4c-9145-f2c99dacbe35.jpg",
     tags: ["СКУД", "ОПС", "СОУЭ", "СВН", "СКС", "Телефония", "Усиление связи", "Часофикация", "Водоподготовка"],
     works: [
       "Обслуживание тренажёров, водоподготовка (бассейн, сауна)",
@@ -43,7 +43,7 @@ const cases = [
     type: "Строительство",
     icon: "Wrench",
     title: "ООО «СТРОЙ-М»",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80",
+    image: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/1e6f0ced-5c44-4175-a19d-87cad2fdc533.jpg",
     tags: ["СКУД", "ОПС", "СВН"],
     works: [
       "Монтаж и обслуживание СКУД",
