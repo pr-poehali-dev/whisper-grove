@@ -107,7 +107,7 @@ const Hero7 = () => {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
               <img
-                src="https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/fa2d7df5-c4df-4f74-8265-e786fbe0594a.jpg"
+                src="https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/6abccc8c-3da1-46ce-adf9-76f8838d958a.jpg"
                 alt="Монтаж инженерных систем"
                 className="w-full h-80 lg:h-96 object-cover"
                 decoding="async"
@@ -116,7 +116,7 @@ const Hero7 = () => {
             </div>
             <div className="absolute -bottom-4 -left-4 rounded-xl overflow-hidden shadow-xl ring-4 ring-slate-800 w-40 h-28">
               <img
-                src="https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/1aa10679-c801-4a40-be96-2b9876e410a1.jpg"
+                src="https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/d5bf19a4-7bd4-4aca-aacc-2934616ddeed.jpg"
                 alt="Инженер на объекте"
                 className="w-full h-full object-cover"
                 loading="lazy"
