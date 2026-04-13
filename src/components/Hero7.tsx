@@ -86,7 +86,7 @@ const Hero7 = () => {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
             >
               {[
-                { icon: "Clock", text: "Выезд за 24 часа" },
+                { icon: "Clock", text: "Выезд бесплатно" },
                 { icon: "Award", text: "Гарантия 12 месяцев" },
                 { icon: "FileCheck", text: "Лицензии МЧС и СРО" },
               ].map((item) => (
