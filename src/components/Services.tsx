@@ -80,7 +80,7 @@ export function Services() {
           transition={{ duration: 0.7 }}
         >
           <img
-            src="https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/fb45c100-7eb0-4bc0-a7ba-9c0a28a9fc61.jpg"
+            src="https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/9000ff55-d7ea-4018-8d02-b0e77bf72e7a.jpg"
             alt="Инженерные системы"
             className="w-full h-full object-cover"
           />
