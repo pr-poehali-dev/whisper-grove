@@ -30,7 +30,7 @@ const cases = [
     type: "Фитнес",
     icon: "Dumbbell",
     title: "ООО «Единый Фитнес»",
-    image: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/8b1a11a5-8630-4d4c-9145-f2c99dacbe35.jpg",
+    image: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/bucket/c7ea91bc-d2e1-48ad-ba2e-e8a83d80b2eb.png",
     tags: ["СКУД", "ОПС", "СОУЭ", "СВН", "СКС", "Телефония", "Усиление связи", "Часофикация", "Водоподготовка"],
     works: [
       "Обслуживание тренажёров, водоподготовка (бассейн, сауна)",
@@ -43,7 +43,7 @@ const cases = [
     type: "Строительство",
     icon: "Wrench",
     title: "ООО «СТРОЙ-М»",
-    image: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/1e6f0ced-5c44-4175-a19d-87cad2fdc533.jpg",
+    image: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/bucket/49b73ebd-8dfb-4dba-bb86-e587b7e54cd6.png",
     tags: ["СКУД", "ОПС", "СВН"],
     works: [
       "Монтаж и обслуживание СКУД",
