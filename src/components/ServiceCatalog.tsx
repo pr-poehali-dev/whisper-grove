@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Icon from "@/components/ui/icon"
 
+const SEND_EMAIL_URL = "https://functions.poehali.dev/c60df347-2dc7-4d0d-af5a-60e3a2b79796"
+
 const catalog = [
   { name: "Домофоны", full: "Домофонные системы", desc: "Монтаж и обслуживание аудио- и видеодомофонов, IP-домофонов для жилых и коммерческих объектов.", image: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/87ba4e22-e650-4eb3-932e-d2535f94915b.jpg" },
   { name: "СКУД", full: "Контроль доступа", desc: "Турникеты, считыватели карт, биометрия — разграничиваем доступ на любом объекте.", image: "https://cdn.poehali.dev/projects/87c2c339-71a8-4667-9743-bce6b2718f3b/files/b1e478ea-896c-439f-a89b-455fc419701e.jpg" },
@@ -36,8 +38,13 @@ export function ServiceCatalog() {
     scrollRef.current.scrollBy({ left: dir === "left" ? -320 : 320, behavior: "smooth" })
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!phone) return
+    await fetch(SEND_EMAIL_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, phone, service: selected?.full }),
+    })
     setSent(true)
     setTimeout(() => {
       setSent(false)

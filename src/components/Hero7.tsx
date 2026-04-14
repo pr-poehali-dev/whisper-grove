@@ -1,9 +1,30 @@
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Icon from "@/components/ui/icon"
 
+const SEND_EMAIL_URL = "https://functions.poehali.dev/c60df347-2dc7-4d0d-af5a-60e3a2b79796"
+
 const Hero7 = () => {
+  const [phone, setPhone] = useState("")
+  const [sent, setSent] = useState(false)
+  const [loading, setLoading] = useState(false)
+
+  const handleSubmit = async () => {
+    if (!phone) return
+    setLoading(true)
+    await fetch(SEND_EMAIL_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ phone, service: "Заявка с главного баннера" }),
+    })
+    setLoading(false)
+    setSent(true)
+    setPhone("")
+    setTimeout(() => setSent(false), 3000)
+  }
+
   return (
     <section className="relative overflow-hidden bg-slate-900 py-20 lg:py-28">
       {/* Фоновое фото */}
@@ -63,20 +84,35 @@ const Hero7 = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
             >
-              <p className="text-sm font-semibold text-white mb-4">Оставьте заявку — получите смету и КП </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Input
-                  placeholder="Ваш телефон"
-                  className="flex-1 bg-white/10 border-white/30 text-white placeholder:text-slate-400 focus:border-indigo-400"
-                />
-                <Button className="bg-indigo-500 hover:bg-indigo-400 text-white whitespace-nowrap font-semibold">
-                  Оставить заявку
-                </Button>
-              </div>
-              <p className="text-xs text-slate-400 mt-3 flex items-center gap-1">
-                <Icon name="Lock" size={11} />
-                Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных
-              </p>
+              {sent ? (
+                <div className="flex items-center gap-2 text-green-400 font-semibold py-2">
+                  <Icon name="CheckCircle2" size={20} />
+                  Заявка отправлена! Мы свяжемся с вами.
+                </div>
+              ) : (
+                <>
+                  <p className="text-sm font-semibold text-white mb-4">Оставьте заявку — получите смету и КП </p>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Input
+                      placeholder="Ваш телефон"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      className="flex-1 bg-white/10 border-white/30 text-white placeholder:text-slate-400 focus:border-indigo-400"
+                    />
+                    <Button
+                      onClick={handleSubmit}
+                      disabled={loading}
+                      className="bg-indigo-500 hover:bg-indigo-400 text-white whitespace-nowrap font-semibold"
+                    >
+                      {loading ? "Отправка..." : "Оставить заявку"}
+                    </Button>
+                  </div>
+                  <p className="text-xs text-slate-400 mt-3 flex items-center gap-1">
+                    <Icon name="Lock" size={11} />
+                    Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных
+                  </p>
+                </>
+              )}
             </motion.div>
 
             <motion.div
